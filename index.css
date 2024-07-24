@@ -1,4 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+    --font-family: 'Libre Franklin', sans-serif;
+    --font-size: 20px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: 3em 1.5em 1em 1.5em;
+    display: grid;
+    justify-content: space-between;
+    gap: 2em;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.article {
+    display: grid;
+    gap: 1em;
+}
+
+.title {
+    font-weight: normal;
+    color: var(--gray);
+}
+
+.soon {
+    font-weight: bold;
+    color: black;
+}
+
+.subscribe {
+    font-size: 0.8em;
+    color: var(--very-dark-blue);
+}
+
+form {
+    display: grid;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+}
+
+.email {
+    padding: 1em 2em;
+    border-radius: 5em;
+    border: 1px solid var(--pale-blue);
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.label {
+    margin-top: 0.5em;
+    font-size: 0.6em;
+    color: var(--light-red);
+}
+
+.button {
+    cursor: pointer;
+    margin-top: 1.5em;
+    padding: 1em;
+    border-radius: 5em;
+    border: none;
+    background: var(--blue);
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+.hero-image {
+    width: 100%;
+}
+
+
+.footer {
+    color: var(--gray);
+    font-weight: lighter;
+    font-size: 0.6em;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.icon-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    padding: 2em;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+
 .icon {
-    width: 1em;
-    height: 1em;
+    filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+    width: 2em;
+    height: 2em;
+}
+
+.footer {
+    display: grid;
+    gap: 1em;
+}
+
+
+@media (min-width: 768px){
+
+    body {
+        margin: auto auto;
+        width: 50%;
+    }
+
+    .email-container {
+        grid-area: email;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label {
+        padding-left: 2.5em;
+        align-self: flex-start;
+    }
+
+    .button-container {
+        grid-area: button;
+    }
+
+    .button {
+        width: 100%;
+        margin: 0;
+    }
+
+    form {
+        gap: 1em;
+        grid-template-areas: 
+            'email email button'
+        ;
+    }
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Ping coming soon page</title>
   <link rel="stylesheet" href="index.css">
@@ -15,23 +16,31 @@
   </header>
   <article class="article">
     <h1 class="title">We are launching <span class="soon">soon!</span></h1>
-    <p>Subscribe and get notified</p>
-    <form action="#">
-      <div class="email">
-        <div class="email-input">
-          <input type="email" name="email" id="email">
-          <p class="warning">Please provide a valid email address</p>
+    <p class="subscribe">Subscribe and get notified</p>
+    <div class="form-container">
+      <form action="#">
+        <div class="email-container"> 
+          <input class="email" type="email" name="email" id="email" placeholder="Your email address...">
+          <label for="email" class="label">Please provide a valid email address</label>
         </div>
-        <button type="submit">Notify Me</button>
-      </div>
-    </form>
-    <img src="images/illustration-dashboard.png" alt="illustration-dashboard">
+        <div class="button-container">
+          <button class="button" type="submit">Notify Me</button>
+        </div>
+      </form>
+    </div>
+    <img class="hero-image" src="images/illustration-dashboard.png" alt="illustration-dashboard">
   </article>
   <footer class="footer">
     <div class="logos">
-      <img class="icon" src="images/facebook.svg" alt="facebook icon">
-      <img class="icon" src="images/x.svg" alt="x icon">
-      <img class="icon" src="images/instagram.svg" alt="instagram icon">
+      <div class="icon-container">
+        <img class="icon" src="images/facebook.svg" alt="facebook icon">
+      </div>
+      <div class="icon-container">
+        <img class="icon" src="images/x.svg" alt="x icon">
+      </div>
+      <div class="icon-container">
+        <img class="icon" src="images/instagram.svg" alt="instagram icon">
+      </div>
     </div>
     <div class="copy-right">&copy Copyright Ping. All rights reserved.</div>
   </footer>
